@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/index.css" />
 </head>
 <body>
-    <h1>Hola mundo!</h1>
-    <h1>Oscar</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/cat-logo.jpg" alt="logo" class="logo"> Ing. Oscar Ramirez
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>       
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link " href="#" id="resumen-link" style="font-size: larger;">Resumen</a>
+                    <a class="nav-link " href="#" id="educacion-link" style="font-size: larger;">Educación</a>
+                    <a class="nav-link " href="#" id="contacto-link" style="font-size: larger;">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5 bg-white custom-container" style="padding: 0px;">
+        <div class="dark">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+                <div class="col-md-5 navbar-brand">
+                    <span id="aa" style="padding-left: 10px;">🔴🟠🟢</span>     
+                </div>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"> 
+                            <span id="navbar-title" style="font-size: larger;">Resumen</span>
+                    </a>
+                </div>
+              </nav>
+        </div>
+        <div id="main-content" class="my-2 mx-3">
+            <!-- Contenido se cargará aquí -->
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-4">
+        <h4>Sígueme en redes sociales</h4>
+        <ul class="list-unstyled list-inline social-icons">
+            <li class="list-inline-item">
+                <a href="#" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        // Obtén una referencia al elemento del título del navbar
+        var navbarTitle = document.getElementById("navbar-title");
+    
+        // Obtiene referencias a los enlaces de navegación
+        var resumenLink = document.getElementById("resumen-link");
+        var educacionLink = document.getElementById("educacion-link");
+        var contactoLink = document.getElementById("contacto-link");
+    
+        // Función para cambiar el título del navbar
+        function cambiarTitulo(titulo) {
+            navbarTitle.innerText = titulo;
+        }
+    
+        // Agrega controladores de eventos a los enlaces
+        resumenLink.addEventListener("click", function() {
+            cambiarTitulo("Resumen");
+        });
+    
+        educacionLink.addEventListener("click", function() {
+            cambiarTitulo("Educación");
+        });
+    
+        contactoLink.addEventListener("click", function() {
+            cambiarTitulo("Contacto");
+        });
+    </script>
+    <script>
+        // Obtén una referencia al contenedor principal
+        var mainContent = document.getElementById("main-content");
+    
+        // Obtiene referencias a los enlaces de navegación
+        var resumenLink = document.getElementById("resumen-link");
+        var educacionLink = document.getElementById("educacion-link");
+        var contactoLink = document.getElementById("contacto-link");
+    
+        // Función para cargar y mostrar el contenido de un archivo HTML
+        function cargarContenido(url) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    mainContent.innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", url, true);
+            xhttp.send();
+        }
+    
+        // Agrega controladores de eventos a los enlaces
+        resumenLink.addEventListener("click", function() {
+            cargarContenido("resumen.html");
+        });
+    
+        educacionLink.addEventListener("click", function() {
+            cargarContenido("educacion.html");
+        });
+    
+        contactoLink.addEventListener("click", function() {
+            cargarContenido("contacto.html");
+        });
+        cargarContenido("resumen.html");
+    </script>
+<script src="https://kit.fontawesome.com/7b4cb18f5c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
