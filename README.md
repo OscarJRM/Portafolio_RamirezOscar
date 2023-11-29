@@ -6,7 +6,20 @@ Portafolio Web de mi Persona: Oscar Ramirez desorrollador de Software Junior.
 
 En este proyecto se utilizon las siguentes herramientas:
 
-
+<p align="left"> 
+  &emsp; 
+  <a href="https://www.w3.org/html/" target="_blank"> 
+   <img alt="HTML" src="https://img.shields.io/badge/HTML5%20-%23E34F26.svg?logo=html5&logoColor=white">
+  </a>   
+  &emsp;
+  <a href="https://www.w3schools.com/css/" target="_blank">
+    <img alt="CSS" src="https://img.shields.io/badge/CSS%20-%231572B6.svg?logo=css3&logoColor=white">
+  </a> 
+   &emsp;
+  <a href="https://getbootstrap.com" target="_blank"> 
+    <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-%23563D7C.svg?style=flat&logo=bootstrap&logoColor=white"/>
+  </a>
+</p>
 
 ### Pre-requisitos 📋
 
@@ -37,16 +50,16 @@ cd Portafolio_RamirezOscar
 ```
 
 
-
 ### Secciones de la pagina Html ⌨️
-📁 
+📁 index.html
+📁 educacion.html
+📁 contacto.html
+📁 resumen.html
 
 ### Secciones de la Pgina css 📦
-
+📁 index.css
 
 ## Construido con 🛠️
-
-_Menciona las herramientas que utilizaste para crear tu proyecto_
 
 * [bootstrap](https://getbootstrap.com/) - Framework css
   
